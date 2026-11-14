@@ -1,0 +1,6 @@
+{
+  "name": "아이콘카페 — 제주 구좌 유기농 당근케이크",
+  "description": "아이콘카페 신메뉴 제주 구좌 유기농 당근케이크 프로모션 및 1회용 바코드 쿠폰 발급·검증 서비스",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
