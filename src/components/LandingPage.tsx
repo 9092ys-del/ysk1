@@ -407,15 +407,15 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
         </section>
 
         {/* 4. 아이콘카페 기본 메뉴 8종 */}
-        <section id="menu" ref={menuSectionRef} className="border-t border-[#1E2A22]/10 bg-[#F3F0E8]/60 py-14 sm:py-20">
+        <section id="menu" ref={menuSectionRef} className="border-t border-[#1E2A22]/15 bg-[#1E2A22] py-14 text-[#FAF8F3] sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
               <div>
-                <p className="text-xs font-semibold text-[#4A6B57]">아이콘카페 기본 메뉴</p>
-                <h2 className="mt-2 text-2xl font-semibold text-[#1E2A22] sm:text-3xl">
+                <p className="text-xs font-semibold tracking-wide text-[#A8CBB3]">아이콘카페 기본 메뉴</p>
+                <h2 className="mt-2 text-2xl font-semibold text-[#FAF8F3] sm:text-3xl">
                   당근케이크와 어울리는 시그니처 음료 8종
                 </h2>
-                <p className="mt-2 text-sm text-[#55645A]">
+                <p className="mt-2 text-sm text-[#C8D3CB]">
                   실제 매장 판매 구성 및 가격은 매장 최종 확인 후 반영됩니다.
                 </p>
               </div>
@@ -424,7 +424,7 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
               <div
                 role="tablist"
                 aria-label="메뉴 카테고리 필터"
-                className="inline-flex self-start rounded-xl border border-[#1E2A22]/10 bg-white p-1"
+                className="inline-flex self-start rounded-xl border border-white/15 bg-[#16201A] p-1"
               >
                 {(
                   [
@@ -442,7 +442,7 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
                     className={`min-h-[36px] rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors whitespace-nowrap shrink-0 sm:text-sm ${
                       menuFilter === tab.key
                         ? 'bg-[#4A6B57] text-white'
-                        : 'text-[#55645A] hover:text-[#1E2A22]'
+                        : 'text-[#C8D3CB] hover:text-white'
                     }`}
                   >
                     {tab.label}
@@ -455,9 +455,9 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
               {filteredMenu.map((item) => (
                 <article
                   key={item.id}
-                  className="group flex flex-col overflow-hidden rounded-xl border border-[#1E2A22]/10 bg-white transition-transform duration-200 hover:-translate-y-0.5"
+                  className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[#25342B] transition-transform duration-200 hover:-translate-y-0.5"
                 >
-                  <div className="aspect-[4/3] w-full overflow-hidden bg-[#EEF2EC]">
+                  <div className="aspect-[4/3] w-full overflow-hidden bg-[#16201A]">
                     <SafeImage
                       src={item.imageUrl}
                       alt={item.imageAlt}
@@ -469,16 +469,16 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
                   <div className="flex flex-1 flex-col justify-between p-4">
                     <div>
                       <div className="flex items-baseline justify-between gap-2">
-                        <h3 className="text-base font-semibold text-[#1E2A22]">{item.name}</h3>
-                        <span className="text-xs font-medium text-[#4A6B57] whitespace-nowrap">
+                        <h3 className="text-base font-semibold tracking-wide text-[#FAF8F3]">{item.name}</h3>
+                        <span className="text-xs font-medium text-[#A8CBB3] whitespace-nowrap">
                           {item.options.join(' · ')}
                         </span>
                       </div>
-                      <p className="mt-1 text-xs text-[#55645A]">{item.englishName}</p>
-                      <p className="mt-2.5 text-sm leading-relaxed text-[#55645A]">{item.description}</p>
+                      <p className="mt-1 text-xs text-[#A5B5AA]">{item.englishName}</p>
+                      <p className="mt-2.5 text-sm leading-relaxed text-[#D7E0D9]">{item.description}</p>
                     </div>
 
-                    <div className="mt-4 border-t border-[#1E2A22]/10 pt-3 text-xs font-medium text-[#55645A] tabular-nums">
+                    <div className="mt-4 border-t border-white/10 pt-3 text-xs font-medium text-[#C8D3CB] tabular-nums">
                       {formatPrice(item.priceKrw)}
                     </div>
                   </div>

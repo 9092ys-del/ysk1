@@ -1,13 +1,13 @@
 import heroCarrotCakeImg from '../assets/images/hero_carrot_cake_1794636275742.jpg';
 import storyCarrotCakeImg from '../assets/images/story_carrot_cake_1794636276902.jpg';
-import americanoImg from '../assets/images/menu_americano_1794636276987.jpg';
-import cafeLatteImg from '../assets/images/menu_cafe_latte_1794636277345.jpg';
-import vanillaLatteImg from '../assets/images/menu_vanilla_latte_1794636277396.jpg';
-import caramelMacchiatoImg from '../assets/images/menu_caramel_macchiato_1794636279049.jpg';
-import matchaLatteImg from '../assets/images/menu_matcha_latte_1794636279557.jpg';
-import chocoLatteImg from '../assets/images/menu_choco_latte_1794636279767.jpg';
-import lemonadeImg from '../assets/images/menu_lemonade_1794636279526.jpg';
-import peachIcedTeaImg from '../assets/images/menu_peach_iced_tea_1794636280181.jpg';
+import americanoImg from '../assets/images/menu_americano_dark_1794638830603.jpg';
+import cafeLatteImg from '../assets/images/menu_cafe_latte_dark_1794638831367.jpg';
+import vanillaLatteImg from '../assets/images/menu_vanilla_latte_dark_1794638831670.jpg';
+import caramelMacchiatoImg from '../assets/images/menu_caramel_macchiato_dark_1794638833402.jpg';
+import matchaLatteImg from '../assets/images/menu_matcha_latte_dark_1794638832065.jpg';
+import chocoLatteImg from '../assets/images/menu_choco_latte_dark_1794638834344.jpg';
+import lemonadeImg from '../assets/images/menu_lemonade_dark_1794638834026.jpg';
+import peachIcedTeaImg from '../assets/images/menu_peach_iced_tea_dark_1794638834165.jpg';
 
 export interface MenuItem {
   id: string;
