@@ -496,7 +496,7 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
               {STORE_CONFIG.brandName} 오시는 길
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[#55645A]">
-              정확한 매장 주소와 영업시간, 연락처는 실제 매장 정보 확정 후 이곳에 바로 안내될 예정입니다.
+              계원예술대 매장 위치와 네이버 지도를 통해 방문 경로를 확인하실 수 있으며, 세부 운영 정보는 확인 후 업데이트됩니다.
             </p>
           </div>
 
@@ -506,17 +506,17 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
                 <MapPin className="h-4 w-4 text-[#4A6B57]" aria-hidden="true" />
                 <span>매장 주소</span>
               </div>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#55645A]">
+              <p className="mt-2.5 text-sm font-medium leading-relaxed text-[#1E2A22]">
                 {STORE_CONFIG.storeInfo.address ?? '매장 주소 확인 후 안내 예정'}
               </p>
               {STORE_CONFIG.storeInfo.mapUrl && (
                 <a
                   href={STORE_CONFIG.storeInfo.mapUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#4A6B57] hover:underline"
                 >
-                  <span>길찾기 열기</span>
+                  <span>네이버 지도에서 보기</span>
                   <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </a>
               )}

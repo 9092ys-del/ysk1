@@ -96,8 +96,8 @@ export const STORE_CONFIG: StoreConfig = {
     stackingNote: '1인 1회 매장 직원 확인 후 사용 가능 · 타 할인 중복 여부는 매장 기준 적용',
   },
   storeInfo: {
-    address: null,
-    mapUrl: null,
+    address: '계원예술대',
+    mapUrl: 'https://map.naver.com/p/search/%EA%B3%84%EC%9B%90%EC%98%88%EC%88%A0%EB%8C%80',
     businessHours: null,
     phone: null,
     parkingGuide: null,

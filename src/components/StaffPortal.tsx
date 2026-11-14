@@ -1131,7 +1131,7 @@ export function StaffPortal({ onNavigateCustomer }: StaffPortalProps) {
                   아래 항목은 현재 설정 파일(storeConfig)에서 미확정 상태로 안전하게 분리되어 있으며, 실제 정보 전달 후 바로 반영할 수 있습니다.
                 </p>
                 <ul className="mt-3 space-y-1.5 text-xs text-[#1E2A22]">
-                  <li>• 매장 주소 / 길찾기 링크 / 영업시간 / 연락처 / 주차 안내</li>
+                  <li>• 상세 도로명·호수, 영업시간, 연락처 및 주차 안내</li>
                   <li>• 신메뉴 당근케이크 및 기본 메뉴 8종의 실제 판매가</li>
                   <li>• 아메리카노 무료 쿠폰 최종 유효기간 및 사이즈·중복할인 기준</li>
                 </ul>
