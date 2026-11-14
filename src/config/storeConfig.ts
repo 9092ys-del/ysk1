@@ -98,7 +98,7 @@ export const STORE_CONFIG: StoreConfig = {
   storeInfo: {
     address: '계원예술대',
     mapUrl: 'https://map.naver.com/p/search/%EA%B3%84%EC%9B%90%EC%98%88%EC%88%A0%EB%8C%80',
-    businessHours: null,
+    businessHours: '오전10시~15시, 오후17시~21시',
     phone: null,
     parkingGuide: null,
   },

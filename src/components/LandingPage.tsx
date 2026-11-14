@@ -527,9 +527,15 @@ export function LandingPage({ onNavigateStaff }: LandingPageProps) {
                 <Clock className="h-4 w-4 text-[#4A6B57]" aria-hidden="true" />
                 <span>영업시간</span>
               </div>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#55645A]">
-                {STORE_CONFIG.storeInfo.businessHours ?? '영업시간 확인 후 안내 예정'}
-              </p>
+              {STORE_CONFIG.storeInfo.businessHours ? (
+                <p className="mt-2.5 text-sm font-medium leading-relaxed text-[#1E2A22] tabular-nums">
+                  {STORE_CONFIG.storeInfo.businessHours}
+                </p>
+              ) : (
+                <p className="mt-2.5 text-sm leading-relaxed text-[#55645A]">
+                  영업시간 확인 후 안내 예정
+                </p>
+              )}
             </div>
 
             <div className="rounded-xl border border-[#1E2A22]/10 bg-white p-5">
