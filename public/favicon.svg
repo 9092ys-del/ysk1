@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="아이콘카페 당근케이크 아이콘">
+  <rect width="64" height="64" rx="16" fill="#FAF8F3" />
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#4A6B57" stroke-opacity="0.18" stroke-width="2" />
+
+  <!-- Subtle plate shadow -->
+  <ellipse cx="32" cy="52" rx="22" ry="5" fill="#1E2A22" fill-opacity="0.12" />
+
+  <!-- Cake sponge side face -->
+  <path d="M12 31 L50 38 L50 49 L12 43 Z" fill="#C96119" />
+  <!-- Cake sponge front/cut texture highlights -->
+  <path d="M12 31 L50 38 L50 49 L12 43 Z" fill="#D97324" fill-opacity="0.7" />
+
+  <!-- Cream cheese middle filling layer -->
+  <path d="M12 37.2 L50 43.8 L50 46.2 L12 39.6 Z" fill="#FFFDF8" />
+
+  <!-- Grated carrot & walnut flecks inside sponge -->
+  <circle cx="19" cy="35" r="1.3" fill="#8C3407" />
+  <circle cx="27" cy="36.5" r="1.1" fill="#FDBA74" />
+  <circle cx="35" cy="39" r="1.3" fill="#8C3407" />
+  <circle cx="43" cy="40.5" r="1.1" fill="#FDBA74" />
+  <circle cx="23" cy="42.5" r="1.2" fill="#8C3407" />
+  <circle cx="32" cy="44" r="1.1" fill="#FDBA74" />
+  <circle cx="41" cy="46" r="1.3" fill="#8C3407" />
+
+  <!-- Back/right edge of cake wedge -->
+  <path d="M50 38 L53 26 L53 36 L50 49 Z" fill="#B55211" />
+
+  <!-- Cream cheese frosting top surface -->
+  <path d="M12 28 C12 26.8 13 25.8 14.5 25.4 L49.5 18.5 C51.5 18.1 53 19.5 53 21.5 L53 26.5 C52 29 50 32.5 50 38 L12 31 Z" fill="#EDE4D3" />
+  <path d="M12 28 L49.5 19.2 C51.4 18.8 53 20 53 22 C53 24 51.4 26 50 33.5 L12 28 Z" fill="#FFFDF8" />
+
+  <!-- Frosting wave lip -->
+  <path d="M12 28 Q18 33.5 24 30 Q30 34.5 36 31.8 Q43 36.5 50 33.5 L50 38 L12 31 Z" fill="#F7F1E3" />
+
+  <!-- Cute miniature carrot topper -->
+  <g transform="translate(30, 14) rotate(-18)">
+    <!-- Leafy sage-green carrot tops -->
+    <path d="M11 4 C13 0 17 0 16 4 C19 3 20 7 15 7 C17 9 14 11 11 7 Z" fill="#4A6B57" />
+    <!-- Bright orange carrot body -->
+    <path d="M12 4.5 C13.5 7 12.2 10 9.5 10.8 L1.2 12 C0.4 12.1 0.1 11.1 0.7 10.5 L7.2 4.4 C8.8 3 11 3.2 12 4.5 Z" fill="#F97316" />
+    <path d="M7.5 6.2 L8.3 8.2 M4.8 7.8 L5.4 9.3" stroke="#C2410C" stroke-width="1.1" stroke-linecap="round" />
+  </g>
+</svg>

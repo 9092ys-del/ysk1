@@ -792,17 +792,50 @@ async function startServer() {
     res.json({ member: updated });
   });
 
+  const resolveBaseUrl = (req: Request): string => {
+    const envUrl = (process.env.APP_URL || '').trim().replace(/\/+$/, '');
+    if (envUrl && envUrl !== 'MY_APP_URL' && /^https?:\/\//.test(envUrl)) {
+      return envUrl;
+    }
+    const proto = (req.headers['x-forwarded-proto'] as string)?.split(',')[0]?.trim() || req.protocol;
+    const host = req.get('host');
+    return host ? `${proto}://${host}` : '';
+  };
+
+  const injectOgUrls = (html: string, req: Request): string => {
+    const baseUrl = resolveBaseUrl(req);
+    if (!baseUrl) return html;
+    const ogImageUrl = `${baseUrl}/og-image.jpg`;
+    const canonicalUrl = `${baseUrl}${req.path === '/staff' ? '/staff' : '/'}`;
+    return html
+      .replace(/content="\/og-image\.jpg"/g, `content="${ogImageUrl}"`)
+      .replace(
+        '<meta property="og:type" content="website" />',
+        `<meta property="og:type" content="website" />\n    <meta property="og:url" content="${canonicalUrl}" />\n    <link rel="canonical" href="${canonicalUrl}" />`
+      );
+  };
+
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
     });
+    app.get(['/', '/staff'], async (req, res, next) => {
+      try {
+        const rawHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+        const transformed = await vite.transformIndexHtml(req.originalUrl, rawHtml);
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(injectOgUrls(transformed, req));
+      } catch (err) {
+        next(err);
+      }
+    });
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(__dirname, 'dist');
     app.use(express.static(distPath));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+    app.get('*', (req, res) => {
+      const rawHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf8');
+      res.status(200).set({ 'Content-Type': 'text/html' }).end(injectOgUrls(rawHtml, req));
     });
   }
 
